@@ -121,7 +121,7 @@ Prior to making human readble names, we have the following variable names after 
 	[76] "fBodyBodyGyroMag-meanFreq()"     "fBodyBodyGyroJerkMag-mean()"     "fBodyBodyGyroJerkMag-std()"     
 	[79] "fBodyBodyGyroJerkMag-meanFreq()" "Subject"                         "Activity_Id"
 
-From reading the information files that come with the data set, we can translate the above as follows to make them more readable variables (using `make.names` and `gsub`:
+From reading the information files that come with the data set, we can translate the above as follows to make them more readable variables (using `make.names` and `gsub`):
   *  Remove the parenthesis.
   *  Leading _f_'s becomes _Frequency_.
   *  Leading _t_'s becomes _Time_.
