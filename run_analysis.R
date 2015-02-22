@@ -64,7 +64,8 @@ names(sensor.data.mean_std) <- gsub('Freq$',"Frequency",names(sensor.data.mean_s
 names(sensor.data.mean_std) <- gsub('\\.mean',".Mean",names(sensor.data.mean_std))
 names(sensor.data.mean_std) <- gsub('\\.std',".StandardDeviation",names(sensor.data.mean_std))
 ##
-## 5. Create a 2nd, independent tidy dataset w/ the average of each variable for each activity & each subject.
+## Step 5 - From the data set in Step 4, creates a second tidy data set with the average
+##          of each variable for each activity and each subject.
 ##                      **...as a txt file created with write.table() using row.name=FALSE
 sensor.avg.by.act.sub <- ddply(sensor.data.mean_std, c("Subject","Activity"), numcolwise(mean))
 write.table(sensor.avg.by.act.sub, file = "tidy_sensor_data.txt", row.name=FALSE)
