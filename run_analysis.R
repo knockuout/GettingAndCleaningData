@@ -48,7 +48,7 @@ sensor.data.mean_std <- sensor.data.mean_std[,-1]
 ##
 ##Step 4 - Appropriately label the dataset with descriptive names.
 ##                      **using gsub() to clean out parens - replaced with ""
-##                      **using make.names() to clean up Column.Names
+##                      **using make.names() to clean up ColumnNames
 ##                      **using gsub() to replace abreviations w/ longer UserFriendly names
 names(sensor.data.mean_std) <- gsub('\\(|\\)',"",names(sensor.data.mean_std), perl = TRUE)
 names(sensor.data.mean_std) <- make.names(names(sensor.data.mean_std))
